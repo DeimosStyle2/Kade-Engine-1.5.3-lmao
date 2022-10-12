@@ -487,7 +487,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT-alt', 'Parent Left Note Mom', 24, false);
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
-				addOffset('idle');
+				addOffset('idle',;
 				addOffset("singUP", -47, 24);
 				addOffset("singRIGHT", -1, -23);
 				addOffset("singLEFT", -30, 16);
@@ -496,6 +496,23 @@ class Character extends FlxSprite
 				addOffset("singRIGHT-alt", -1, -24);
 				addOffset("singLEFT-alt", -30, 15);
 				addOffset("singDOWN-alt", -30, -27);
+
+				playAnim('idle');
+			case 'radi':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/Radi_Assets', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Radi_Idle', 24);
+				animation.addByPrefix('singUP', 'Radi_Up', 24);
+				animation.addByPrefix('singRIGHT', 'Radi_Right', 24);
+				animation.addByPrefix('singDOWN', 'Radi_Down', 24);
+				animation.addByPrefix('singLEFT', 'Radi_Left', 24);
+
+				addOffset('idle', 290,69);
+				addOffset("singUP", 344, 100);
+				addOffset("singRIGHT", 571, -47);
+				addOffset("singLEFT", 335, 63);
+				addOffset("singDOWN", 450, -240);
 
 				playAnim('idle');
 		}
